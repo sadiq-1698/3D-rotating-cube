@@ -2,3 +2,64 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cube-container {
+    height: 180px;
+    width: 180px;
+    transform-style: preserve-3d;
+    transform: rotateX(180deg) rotateY(-200deg) rotateZ(-60deg);
+    cursor: pointer;
+    animation : cube-rotation 5s linear infinite;
+}
+
+.cube.top, .cube.bottom, .cube.left, .cube.right, .cube.front, .cube.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    border: 2px solid black;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 1s;
+}
+
+.cube.top {
+    background: green;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube.bottom {
+    background: red;
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+.cube.right {
+    background: brown;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube.left {
+    background: yellow;
+    transform: rotateY(90deg) translateZ(-100px);
+}
+
+.cube.front {
+    background: orange;
+    transform: rotateZ(90deg) translateZ(100px);
+}
+
+.cube.back {
+    background: blue;
+    transform: rotateZ(90deg) translateZ(-100px);
+}
+
+@keyframes cube-rotation{
+    0%{ transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)}
+    100%{ transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) }
+}
