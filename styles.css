@@ -8,14 +8,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cube-container {
     height: 200px;
     width: 200px;
     transform-style: preserve-3d;
-    transform: rotateX(180deg) rotateY(-200deg) rotateZ(-60deg);
     cursor: pointer;
+}
+
+.animate{
     animation : cube-rotation 5s linear infinite;
 }
 
@@ -23,7 +26,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: .5;
+    opacity: 1;
     border: 2px solid white;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
     transition: transform 1s;
