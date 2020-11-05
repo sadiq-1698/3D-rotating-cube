@@ -18,8 +18,8 @@ body {
     cursor: pointer;
 }
 
-.animate{
-    animation : cube-rotation 5s linear infinite;
+.animate {
+    animation: cube-rotation 5s linear infinite;
 }
 
 .cube.top, .cube.bottom, .cube.left, .cube.right, .cube.front, .cube.back {
@@ -62,7 +62,11 @@ body {
     transform: rotateZ(90deg) translateZ(-100px);
 }
 
-@keyframes cube-rotation{
-    0%{ transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)}
-    100%{ transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) }
+@keyframes cube-rotation {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
 }
