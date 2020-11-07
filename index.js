@@ -1,7 +1,7 @@
 const cube = document.getElementsByClassName('cube-container')[0];
 const totalcssRules = document.styleSheets[0].cssRules.length;
 const keyframes = document.styleSheets[0].cssRules[totalcssRules - 1];
-let animation1 = "cube-rotation 1s linear infinite";
+let animation1 = "cube-rotation .7s linear infinite";
 
 let X = 0;
 let Y = 0;
@@ -15,7 +15,6 @@ cube.addEventListener('dragend', dragEnd);
 cube.addEventListener('onmouseover', onMouseOver);
 
 function dragStart(e) {
-    console.log("started");
     let {_x , _y} = onMouseOver(e);
     X = _x % 360;
     Y = _y % 360;
@@ -24,8 +23,9 @@ function dragStart(e) {
 }
 
 function dragEnd() {
-    console.log(X + " " + Y + " " + Z);
+
     console.log("ended");
+    cube.style.animation = animation1;
 }
 
 function onMouseOver(e) {
